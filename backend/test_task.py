@@ -88,7 +88,7 @@ def test_createTask(base_url, data, status_code):
 def test_searchTask(base_url):
     url = f"{base_url}/todos/672766f355d1cdbbc1f45135"
     res = requests.get(url)
-    assert res.status_code == 500
+    assert res.status_code == 200
 
 
 @allure.feature('update task')
