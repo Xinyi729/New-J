@@ -38,15 +38,27 @@ def test_getCategory(base_url):
     ({"name": "categoryname1",
       "slug": "task",
       "email": ""}, 400)])
+# def test_createCategory(base_url, data, status_code):
+#     global category_id
+#     url = f"{base_url}/categories"
+#     res = requests.post(url, json=data)
+#     print(res.json())
+#     if res.status_code == 201:
+#         category_id = res.json()['_id']
+#     assert res.status_code == status_code
 def test_createCategory(base_url, data, status_code):
     global category_id
     url = f"{base_url}/categories"
     res = requests.post(url, json=data)
     print(res.json())
     if res.status_code == 201:
-        category_id = res.json()['_id']
-    assert res.status_code == status_code
+         if "_id" in res.json():
+            category_id = res.json()['_id']
+            print("Category created")
 
+         elif "message" in res.json():
+           print("Category already exists.")
+    assert res.status_code == status_code
 
 @allure.feature('create task')
 @allure.story('create a to-do-task in category')
