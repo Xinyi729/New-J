@@ -175,7 +175,7 @@ def test_deleteTask(base_url):
 #     print(category_id)
 #     url = f"{base_url}/categories/{category_id}"
 #     res = requests.delete(url)
-#     assert res.status_code == 200
+#     assert res.status_code == 500
 
 
 if __name__ == "__main__":
