@@ -129,7 +129,7 @@ def test_updataTask(base_url, data, status_code):
 @allure.story('update the category text')
 @pytest.mark.parametrize("data, status_code", [
     ({
-        "categoryId": "672766f355d1cdbbc1f45135",
+        "categoryId": "6742161f370be4f12da7a9f7",
         "email": "j835574934@gmail.com",
         "updateData": {
             "name": "Updated Category By SHeen",
@@ -137,7 +137,7 @@ def test_updataTask(base_url, data, status_code):
         }
     }, 200),
     ({
-        "categoryId": "672766f355d1cdbbc1f45135",
+        "categoryId": "6742161f370be4f12da7a9f7",
         "email": "j835574934@gmail.com",
         "updateData": {
             "name": "",
@@ -145,7 +145,7 @@ def test_updataTask(base_url, data, status_code):
         }
     }, 500),
     ({
-        "categoryId": "672766f355d1cdbbc1f45135",
+        "categoryId": "6742161f370be4f12da7a9f7",
         "email": "j835574934@gmail.com",
         "updateData": {
             "name": "Updated Category By SHeen",
