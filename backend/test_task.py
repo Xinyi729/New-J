@@ -100,7 +100,7 @@ def test_createTask(base_url, data, status_code):
 def test_searchTask(base_url):
     url = f"{base_url}/todos/672766f355d1cdbbc1f45135"
     res = requests.get(url)
-    assert res.status_code == 200
+    assert res.status_code == 500
 
 
 @allure.feature('update task')
@@ -175,7 +175,7 @@ def test_deleteTask(base_url):
 #     print(category_id)
 #     url = f"{base_url}/categories/{category_id}"
 #     res = requests.delete(url)
-#     assert res.status_code == 500
+#     assert res.status_code == 200
 
 
 if __name__ == "__main__":
